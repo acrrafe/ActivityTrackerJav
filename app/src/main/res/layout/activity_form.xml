@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".ActivityForm"
+    style="@style/SCREEN">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/actFormTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:background="@drawable/transparent_background"
+                android:text="Activity Title"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.078"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/TEXT"/>
+
+            <TextView
+                android:id="@+id/actFormDueDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Task Due Date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/guidlineMiddle"
+                style="@style/TEXT"/>
+
+            <Button
+                android:id="@+id/actDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="Current Date"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/actFormDueDate"
+                app:layout_constraintTop_toBottomOf="@+id/guidlineMiddle"
+                android:theme="@style/BUTTON"/>
+
+            <TextView
+                android:id="@+id/actFormTimeDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:text="Time Due Date"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/actFormDueDate"
+                style="@style/TEXT"/>
+
+            <Button
+                android:id="@+id/actTimeDue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="232dp"
+                android:layout_marginTop="22dp"
+                android:text="Current Time"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/actFormTimeDue"
+                app:layout_constraintTop_toBottomOf="@+id/actDue"
+                android:theme="@style/BUTTON"/>
+
+            <TextView
+                android:id="@+id/actFormRepeatTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="51dp"
+                android:text="Repeat Task"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/actFormTimeDue"
+                style="@style/TEXT"/>
+
+            <Switch
+                android:id="@+id/actRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/actFormRepeatTask"
+                app:layout_constraintTop_toBottomOf="@+id/actTimeDue"/>
+
+            <RadioGroup
+                android:id="@+id/rgRepeatTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/actFormRepeatTask">
+
+                <RadioButton
+                    android:id="@+id/rbHourly"
+                    android:button="@drawable/transparent_background"
+                    android:background="@drawable/radio_repeat_selector"
+                    android:textColor="@drawable/radio_repeat_text_selector"
+                    android:elevation="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hourly"
+                    android:layout_margin="10dp"
+                    android:padding="16dp"
+                    android:enabled="false"/>
+
+                <RadioButton
+                    android:id="@+id/rbDaily"
+                    android:button="@drawable/transparent_background"
+                    android:background="@drawable/radio_repeat_selector"
+                    android:textColor="@drawable/radio_repeat_text_selector"
+                    android:elevation="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily"
+                    android:layout_margin="10dp"
+                    android:padding="16dp"
+                    android:enabled="false" />
+
+                <RadioButton
+                    android:id="@+id/rbMonthly"
+                    android:button="@drawable/transparent_background"
+                    android:background="@drawable/radio_repeat_selector"
+                    android:textColor="@drawable/radio_repeat_text_selector"
+                    android:elevation="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly"
+                    android:padding="16dp"
+                    android:layout_margin="10dp"
+                    android:enabled="false"/>
+
+                <RadioButton
+                    android:id="@+id/rbYearly"
+                    android:button="@drawable/transparent_background"
+                    android:background="@drawable/radio_repeat_selector"
+                    android:textColor="@drawable/radio_repeat_text_selector"
+                    android:elevation="2dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yearly"
+                    android:layout_margin="10dp"
+                    android:padding="16dp"
+                    android:enabled="false"/>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/actFormNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Notes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/rgRepeatTask"
+                style="@style/TEXT"/>
+            // Notes List
+
+            <TextView
+                android:id="@+id/actNotesList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="10dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/actFormNotes"
+                app:layout_constraintVertical_bias="0.0"
+                style="@style/TEXT"/>
+
+            <Button
+                android:id="@+id/btnAddNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="ADD"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.996"
+                app:layout_constraintStart_toEndOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/rgRepeatTask"
+                app:layout_constraintVertical_bias="0.011"
+                android:theme="@style/BUTTON"/>
+
+            <Button
+                android:id="@+id/btnEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="EDIT"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.981"
+                app:layout_constraintStart_toEndOf="@+id/actFormNotes"
+                app:layout_constraintTop_toBottomOf="@+id/actFormNotes"
+                app:layout_constraintVertical_bias="0.327"
+                android:theme="@style/BUTTON"/>
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:text="SAVE"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/btnCreateTask"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.981"
+                app:layout_constraintStart_toEndOf="@+id/actFormNotes"
+                app:layout_constraintTop_toBottomOf="@+id/actFormNotes"
+                app:layout_constraintVertical_bias="0.327"
+                android:theme="@style/BUTTON"/>
+
+            <EditText
+                android:id="@+id/actNotes"
+                android:layout_width="290dp"
+                android:layout_height="167dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/transparent_background"
+                android:gravity="top|start"
+                android:hint="Add a notes"
+                android:inputType="textMultiLine"
+                android:lines="8"
+                android:maxLines="10"
+                android:minLines="6"
+                android:scrollbars="vertical"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="0.287"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/rgRepeatTask"
+                app:layout_constraintVertical_bias="0.0"
+                style="@style/TEXT"/>
+
+            <Button
+                android:id="@+id/btnCreateTask"
+                android:layout_width="353dp"
+                android:layout_height="match_parent"
+                android:text="Create Task"
+                android:layout_marginTop="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidlineRight"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guidlineLeft"
+                app:layout_constraintTop_toBottomOf="@+id/actNotesList"
+                android:theme="@style/BUTTON"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidlineMiddle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="246dp"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidlineLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidlineRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="372dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

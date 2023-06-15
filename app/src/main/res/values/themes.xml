@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ActivityTracker" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">#2D3940</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">#FFD600</item>
+        <item name="colorSecondaryVariant">@color/red</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="barColor">#FCFCFC</item>
+        <item name="textColor">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+    <color name="red">#CD0202</color>
+    <!-- Light Mode-->
+    <style name="SCREEN">
+        <item name="android:background">@color/white</item>
+    </style>
+    <style name="TEXT">
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="APPBAR">
+        <item name="android:textColor">#FCFCFC</item>
+    </style>
+    <style name="BUTTON">
+        <item name="android:background">#2D3940</item>
+    </style>
+
+
+</resources>
